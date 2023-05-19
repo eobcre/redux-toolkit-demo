@@ -1,5 +1,11 @@
+import Example from './Example';
+
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <Example />
+    </>
+  );
 };
 
 export default App;
