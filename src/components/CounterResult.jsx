@@ -1,15 +1,9 @@
-import CounterResult from './CounterResult';
-import CounterButton from './CounterButton';
+import { useSelector } from 'react-redux';
 
-const Counter = () => {
-  return (
-    <>
-      <CounterResult />
-      <CounterButton step={2} calcType='+' />
-      <CounterButton step={2} calcType='-' />
-      <CounterButton step={10} calcType='+' />
-      <CounterButton step={10} calcType='-' />
-    </>
-  );
+const CounterResult = () => {
+  const state = useSelector((state) => state);
+
+  return <h3>{state.counter}</h3>;
 };
-export default Counter;
+
+export default CounterResult;
